@@ -34,3 +34,14 @@
 .jumbotron .lang-logo img {
   max-width: 100%;
 }
+.header {
+  height: 70px;
+  line-height: 70px;
+  @include clearfix;
+}
+h1 {
+  float: left;
+}
+.actions {
+  float: right;
+}

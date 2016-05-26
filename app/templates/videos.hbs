@@ -1,0 +1,25 @@
+<div class="header">
+  <h1>Videos</h1>
+  <div class='actions'>
+    {{#link-to 'videos.new'}}Add video{{/link-to}}
+  </div>
+</div>
+<table class='table'>
+  <tbody>
+    {{#each model as |video|}}
+    <tr>
+      <td>
+        {{#link-to 'videos.edit' video}}{{video.title}}{{/link-to}}
+        {{#if video.location}}
+          @{{video.location}}
+        {{/if}}
+        <br>
+        {{#each video.categories as |category|}}
+          {{#link-to 'categories.category' category class="label label-default"}}{{category.name}}{{/link-to}}
+        {{/each}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+</table>
